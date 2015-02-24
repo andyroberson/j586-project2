@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>dRAG stuff</title>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="http://code.bynathan.com/src/jQuery.min.js"></script>
+    <script src="https://rawgit.com/ByNathan/jQuery.dragmove/master/jQuery.dragmove.js"></script>
+    <script src="jQuery.dragmove.js"></script>
+</head>
+
+<body>
+<style>
+    .trash {
+        background: black;
+        height: 200px;
+        width: 200px;
+    }
+    
+    .drag {
+        background: purple;
+        width: 100px;
+        height: 100px;
+        z-index: -2;
+    }
+    
+    #nodrag {
+        left: 400px;
+        top: 300px;
+        position:absolute;
+        height: 100px;
+        width: 50px;
+        background: #333;
+    }
+</style>
+<div class="trash" ondrop="drop(event)" ondragover="allowDrop(event)">trashy</div>
+<br>
+<br>
+<div class="drag">heyyyyo</div>
+<div id="nodrag">no draggy</div>
+<script>
+    $(function() {  
+
+    // All div elements
+    $('.drag').dragmove();
+    
+/*   function allowDrop(ev) {
+    ev.preventDefault();
+}
+
+    function drop(ev) {
+    
+        ev.preventDefault();
+        var data = ev.dataTransfer.getData("text");
+        ev.target.appendChild(document.getElementById(data)).remove();
+}
+*/
+
+});
+</script>
+</body>
+</html>
