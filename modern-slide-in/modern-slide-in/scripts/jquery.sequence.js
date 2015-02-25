@@ -248,7 +248,7 @@ Sequence also relies on the following open source scripts:
 				oncePreloaded(); //run the init functionality when the preloader has finished
 				$(this).unbind("load.sequence"); //unbind the load event as it's no longer needed
 			}else{ //if the window hasn't already loaded...
-				$(window).bind("load.sequence", function() { //when the window loads...	
+				$(window).bind("load.sequence", function() { //when the window loads...
 					oncePreloaded(); //run the init functionality when the preloader has finished
 					$(this).unbind("load.sequence"); //unbind the load event as it's no longer needed
 				});
@@ -501,22 +501,22 @@ Sequence also relies on the following open source scripts:
 		//PUBLIC METHODS
 		/*
 		start autoPlay -- causing Sequence to automatically change frame every x amount of milliseconds
-		
+
 		delay: a time in ms before starting the autoPlay feature (if unspecified, the default will be used)
 		*/
 		startAutoPlay: function(delay) {
-			var self = this;
-			delay = (delay === undefined) ? self.settings.autoPlayDelay : delay; //if a delay isn't specified, use the default
-			self.unpause();
-
-			resetAutoPlay(self); //stop autoPlay before starting it again
-			self.autoPlayTimer = setTimeout(function() { //start a new autoPlay timer and...
-				if(self.settings.autoPlayDirection === 1) { //go to either the next or previous frame
-					self.next();
-				}else{
-					self.prev();
-				}
-			}, delay); //after a specified delay
+			// var self = this;
+			// delay = (delay === undefined) ? self.settings.autoPlayDelay : delay; //if a delay isn't specified, use the default
+			// self.pause(); //AR trying to stop dumb autoplay thing
+			//
+			// resetAutoPlay(self); //stop autoPlay before starting it again
+			// self.autoPlayTimer = setTimeout(function() { //start a new autoPlay timer and...
+			// 	if(self.settings.autoPlayDirection === 1) { //go to either the next or previous frame
+			// 		self.next();
+			// 	}else{
+			// 		self.prev();
+			// 	}
+			// }, delay); //after a specified delay
 		},
 
 		//stop causing Sequence to automatically change frame every x amount of seconds
@@ -556,7 +556,7 @@ Sequence also relies on the following open source scripts:
 
 		/*
 		Start the autoPlay feature, as well as deal with any changes to pauseButtons, pauseIcons and public variables etc
-		
+
 		callback: if false, the unpause callback will not be initiated (this is because unpause is used internally during the stop and start of each frame)
 		*/
 		unpause: function(callback) {
@@ -606,7 +606,7 @@ Sequence also relies on the following open source scripts:
 
 		/*
 		Go to a specific frame
-		
+
 		id: number of the frame to go to
 		direction: direction to get to that frame (1 = forward, -1 = reverse)
 		ignoreTransitionThreshold: if true, ignore the transitionThreshold setting and immediately go to the specified frame
@@ -803,7 +803,7 @@ Sequence also relies on the following open source scripts:
 			}
 		},
 
-		/* 
+		/*
 			removes Sequence from the element it's attached to
 
 			callback: a callback to run once .destroy() has finished (or see the sequence.destroyed() callback)
@@ -889,7 +889,7 @@ Sequence also relies on the following open source scripts:
 
 	/*
 	reset the transition-duration and transition-delay properties of an element
-	
+
 	elementToReset = the element that is to have it's properties reset
 	cssValue = the value to be given to the transition-duration and transition-delay properties
 	*/
@@ -970,7 +970,7 @@ Sequence also relies on the following open source scripts:
 
 	/*
 	adds the browser vendors prefix onto multiple CSS properties
-	
+
 	prefix = the prefix for the browser Sequence is being viewed in (-webkit- for example)
 	properties = the properties to be prefixed (transition-duration for example)
 	*/
@@ -1005,7 +1005,7 @@ Sequence also relies on the following open source scripts:
 	};
 
 	/*functionality to initiate the preloader, next/previous buttons and so on
-	
+
 	devOption: true = the developer wants to use the default selector. false = don't use a uiElement. string = the developer defined selector to use for the UI element
 	defaultOption: the default selector to use for the UI element, when the developer specifies false for devOption
 	*/
