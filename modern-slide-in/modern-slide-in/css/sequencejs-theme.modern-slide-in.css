@@ -124,7 +124,6 @@ table {
 #sequence > .sequence-canvas {
   height: 100%;
   width: 100%;
-  overflow: auto;
 }
 #sequence > .sequence-canvas > li {
   position: absolute;
@@ -211,11 +210,11 @@ table {
 .sequence-pagination li img {
   cursor: pointer;
   opacity: 0.5;
-  -webkit-transition-duration: 1s;
-  -moz-transition-duration: 1s;
-  -ms-transition-duration: 1s;
-  -o-transition-duration: 1s;
-  transition-duration: 1s;
+  -webkit-transition-duration: .2s;
+  -moz-transition-duration: .2s;
+  -ms-transition-duration: .2s;
+  -o-transition-duration: .2s;
+  transition-duration: .2s;
   -webkit-transition-property: margin-bottom, opacity;
   -moz-transition-property: margin-bottom, opacity;
   -ms-transition-property: margin-bottom, opacity;
@@ -224,11 +223,11 @@ table {
 }
 .sequence-pagination li img:hover {
   margin-bottom: 4px;
-  -webkit-transition-duration: 0.3s;
-  -moz-transition-duration: 0.3s;
-  -ms-transition-duration: 0.3s;
-  -o-transition-duration: 0.3s;
-  transition-duration: 0.3s;
+  -webkit-transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  -ms-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+  transition-duration: 0.2s;
 }
 .sequence-pagination li.current img {
   opacity: 1;
@@ -272,6 +271,7 @@ h3 {
   width: 35%;
   opacity: 0;
   bottom: -10%;
+  color: #000;
   z-index: 50;
   font-family: harry-potter;
 }
@@ -313,10 +313,17 @@ h3 {
   border-bottom: 1px solid #000;
 }
 
+.parchment-title {
+  font-size: 3em;
+}
+
 .red {
   color: #ff0000;
   border-bottom: 1px solid #ff0000;
 }
+
+.red-no-border {
+  color: #ff0000;}
 
 .animate-in .title {
   left: 45%;
@@ -338,20 +345,141 @@ h3 {
   transition-duration: 0.5s;
 }
 
-.drag {
-  left: 0%;
-  width: 50%;
+.fluxw {
   opacity: 0;
-  bottom: 1%;
+  right: 0%;
+  display: inline-block;
+  margin-right: 7%;
+  margin-left: 0%;
+}
+
+.animate-in .fluxw {
+  right: 10%;
+  opacity: 1;
+  -webkit-transition-duration: 0.0s;
+  -moz-transition-duration: 0.0s;
+  -ms-transition-duration: 0.0s;
+  -o-transition-duration: 0.0s;
+  transition-duration: 0.0s;
+}
+
+.animate-out .fluxw {
+  right: 20%;
+  opacity: 0;
+  -webkit-transition-duration: 0.0s;
+  -moz-transition-duration: 0.0s;
+  -ms-transition-duration: 0.0s;
+  -o-transition-duration: 0.0s;
+  transition-duration: 0.0s;
+}
+
+.knotg {
+  opacity: 0;
+  right: 10%;
+  display: inline-block;
+  margin: 7%;
+}
+
+.animate-in .knotg {
+  right: 30%;
+  opacity: 1;
+  -webkit-transition-duration: 0.0s;
+  -moz-transition-duration: 0.0s;
+  -ms-transition-duration: 0.0s;
+  -o-transition-duration: 0.0s;
+  transition-duration: 0.0s;
+}
+
+.animate-out .knotg {
+  right: 10%;
+  opacity: 0;
+  -webkit-transition-duration: 0.0s;
+  -moz-transition-duration: 0.0s;
+  -ms-transition-duration: 0.0s;
+  -o-transition-duration: 0.0s;
+  transition-duration: 0.0s;
+}
+
+.leech {
+  opacity: 0;
+  right: 10%;
+  display: inline-block;
+  margin-left: 10%;
+  margin-right: 0%;
+}
+
+.animate-in .leech {
+  right: 60%;
+  opacity: 1;
+  -webkit-transition-duration: 0.0s;
+  -moz-transition-duration: 0.0s;
+  -ms-transition-duration: 0.0s;
+  -o-transition-duration: 0.0s;
+  transition-duration: 0.0s;
+}
+
+.animate-out .leech {
+  right: 20%;
+  opacity: 0;
+  -webkit-transition-duration: 0.0s;
+  -moz-transition-duration: 0.0s;
+  -ms-transition-duration: 0.0s;
+  -o-transition-duration: 0.0s;
+  transition-duration: 0.0s;
+}
+
+.lace {
+  opacity: 0;
+  right: 20%;
+  height: auto !important;
+  max-height: 100px !important;
+  width: 10%;
+  min-width: 30px;
+  /* prevents from shrinking when the browser is resized */
+  max-width: 100px;
+  display: inline-block;
+  margin: 10%;
+  margin-top: 7%;
+}
+
+.animate-in .lace {
+  right: 80%;
+  opacity: 1;
+  -webkit-transition-duration: 0.0s;
+  -moz-transition-duration: 0.0s;
+  -ms-transition-duration: 0.0s;
+  -o-transition-duration: 0.0s;
+  transition-duration: 0.0s;
+}
+
+.animate-out .lace {
+  right: 20%;
+  opacity: 0;
+  -webkit-transition-duration: 0.0s;
+  -moz-transition-duration: 0.0s;
+  -ms-transition-duration: 0.0s;
+  -o-transition-duration: 0.0s;
+  transition-duration: 0.0s;
+}
+
+.drag {
+  opacity: 0;
+  bottom: -20%;
   z-index: 53;
-  color: #000;
-  height: 50px;
-  width: 50px;
-  background: #000;
+  height: auto !important;
+  max-height: 268px !important;
+  width: 10%;
+  min-width: 50px;
+  /* prevents from shrinking when the browser is resized */
+  max-width: 100px;
+}
+
+.drag:hover {
+  cursor: pointer;
 }
 
 .animate-in .drag {
-  left: 20%;
+  left: 70%;
   opacity: 1;
   -webkit-transition-duration: 0.0s;
   -moz-transition-duration: 0.0s;
@@ -368,6 +496,35 @@ h3 {
   -ms-transition-duration: 0.0s;
   -o-transition-duration: 0.0s;
   transition-duration: 0.0s;
+}
+
+.images {
+  left: 70%;
+  width: 50%;
+  text-align: justify;
+  top: 90%;
+  z-index: 51;
+  opacity: 0;
+}
+
+.animate-in .images {
+  left: 45%;
+  opacity: 1;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -ms-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+
+.animate-out .images {
+  left:35%;
+  opacity: 0;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -ms-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
 }
 
 .div {
@@ -433,8 +590,7 @@ h3 {
   transition-duration: 0.5s;
 }
 
-
-.center-div {
+.quiz-div {
   left: -20%;
   width: 60%;
   opacity: 0;
@@ -446,7 +602,7 @@ h3 {
   line-height: 3em;
 }
 
-.animate-in .center-div {
+.animate-in .quiz-div {
   left: 20%;
   opacity: 1;
   -webkit-transition-duration: 0.5s;
@@ -456,7 +612,7 @@ h3 {
   transition-duration: 0.5s;
 }
 
-.animate-out .center-div {
+.animate-out .quiz-div {
   left: 5%;
   opacity: 0;
   -webkit-transition-duration: 0.5s;
@@ -560,6 +716,41 @@ h3 {
   -o-transition-duration: 0.5s;
   transition-duration: 0.5s;
 }
+
+.cauldron {
+  left: 30%;
+  bottom: -20%;
+  opacity: 0;
+  position: relative;
+  height: auto !important;
+  max-height: 568px !important;
+  width: 30%;
+  min-width: 200px;
+  /* prevents the bottle from shrinking when the browser is resized */
+  max-width: 280px;
+  z-index: 100;
+}
+
+.animate-in .cauldron {
+  left: 15%;
+  opacity: 1;
+  -webkit-transition-duration: 1s;
+  -moz-transition-duration: 1s;
+  -ms-transition-duration: 1s;
+  -o-transition-duration: 1s;
+  transition-duration: 1s;
+}
+
+.animate-out .cauldron {
+  left: 15%;
+  opacity: 0;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -ms-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+
 
 
 @media only screen and (min-width: 992px) {
