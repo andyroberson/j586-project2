@@ -191,7 +191,7 @@ table {
 .sequence-pagination {
   bottom: 1%;
   display: none;
-  right: 8%;
+  right: 6%;
   position: absolute;
   z-index: 10;
   -webkit-transition-duration: 0.5s;
@@ -761,6 +761,7 @@ h3 {
   #sequence .front-title {
     width: 42%;
   }
+
 }
 @media only screen and (max-width: 838px) {
   #sequence {
@@ -770,6 +771,7 @@ h3 {
     max-height: 530px !important;
     width: auto;
   }
+
 }
 @media only screen and (max-width: 768px) {
   #sequence {
@@ -783,13 +785,23 @@ h3 {
     font-size: 2.8em;
   }
 
+  #sequence .div {
+    font-size: 2em;
+  }
+
+  #sequence .front-title .big {
+    font: 2.8em;
+  }
+
   #sequence .subtitle {
     font-size: 1.6em;
   }
   #sequence .sequence-next,
   #sequence .sequence-prev {
-    height: 60px;
+    height: 20px;
     margin-top: -40px;
+    background: #000;
+    opacity: .1;
   }
   #sequence .model {
     max-height: 480px !important;
@@ -797,6 +809,12 @@ h3 {
   }
 }
 @media only screen and (max-width: 568px) {    /*this is where div stuff comes in handy*/
+
+  #sequence .sequence-pagination {
+    opacity: 0;
+    visibility: hidden;
+  }
+
   #sequence .model {
     left: 50%;
     min-width: 40%;
@@ -804,6 +822,7 @@ h3 {
     width: 40%;
     bottom: -25%;
   }
+
   #sequence .animate-in .model {
     left: 50%;
     margin-left: -20%;
@@ -816,10 +835,9 @@ h3 {
   #sequence .title {
     background: #a1a1a1;
     background: rgba(0, 0, 0, 0.3);
-    bottom: 0;
     left: 100%;
-    padding: 4%;
-    bottom: -50%;
+    padding: 2%;
+    bottom: 5%;
     width: 100%;
     z-index: 11;
   }
@@ -848,17 +866,44 @@ h3 {
       left: -100%;
     }
 
-  /*********************************************************************************************************** POOP */
-  /*works like this!!! just need to style better + make model be positioned at top*/
+ .bottle {
+      top: 55%;
+      position: relative;
+      height: auto !important;
+      max-height: 120px !important;
+      width: 20%;
+      min-width: 10px;
+      /* prevents the bottle from shrinking when the browser is resized */
+      max-width: 90px;
+    }
+
+  .animate-in .bottle {
+    left: 40%;
+  }
+
+ .cauldron {
+      left: 0%;
+      top: 60%;
+      height: auto !important;
+      max-height: 120px !important;
+      width: 20%;
+      min-width: 10px;
+      /* prevents the bottle from shrinking when the browser is resized */
+      max-width: 90px;
+    }
+.animate-in .cauldron {
+  left: 45%;
+}
   #sequence .div {
-    background: purple;
-    bottom: -400px;
+    background: #fff;
     left: 100%;
     padding: 4%;
-    /*bottom: -50%;*/
+    padding-top:190px;
+    bottom: -100%;
     width: 100%;
     z-index: 10;
-    height: 220px;
+    font-size: 1.5em;
+    padding: 10%;
   }
 
   #sequence .animate-in .div {
@@ -872,16 +917,91 @@ h3 {
   #sequence .subtitle {
     visibility: hidden;
   }
+
+  #sequence .title {
+    font-size: 2.2em;
+  }
+
+  #sequence .front-title {
+    font-size: 2.2em;
+  }
+
+  #sequence .front-title .big {
+    font-size: 1.5em;
+  }
+
   #sequence .sequence-pagination {
-    bottom: 40px;
+    opacity: 0;
+    visibility: hidden;
   }
-  #sequence .sequence-pagination li img {
-    height: 100px;
+
+  #sequence .parchment {
+    font-size: 1.2em;
+    top: 50%;
+    height: 90%;
+    left: 15%;
+    width: 75%;
   }
+
+  #sequence .parchment-title {
+    font-size: 1.5em;
+  }
+
+  #sequence .images {
+    left: 10%;
+    width: 85%;
+    top: 120%;
+  }
+
+  #sequence .fluxw {
+    margin-right: 10px;
+    margin-left: 0px;
+  }
+
+  #sequence .knotgx {
+    margin: 15px;
+  }
+
+  #sequence .leech {
+    margin: 15px;
+  }
+
+  #sequence .lace {
+    margin-left: 10px;
+    margin-right: 0px;
+  }
+
+  #sequence .drag {
+  bottom: -20%;
+  z-index: 53;
+  height: auto !important;
+  max-height: 100px !important;
+  width: 5%;
+  min-width: 10px;
+  /* prevents from shrinking when the browser is resized */
+  max-width: 100px;
+}
+
 }
 @media only screen and (max-width: 518px) {
   #sequence {
     height: 450px;
+  }
+
+  #sequence .sequence-pagination {
+    opacity: 0;
+    visibility: hidden;
+  }
+  #sequence .title {
+    font-size: 2.2em;
+  }
+
+  #sequence .front-title {
+    font-size: 2.2em;
+  }
+
+  #sequence .front-title .big {
+    font-size: 1.5em;
   }
 }
 @media only screen and (max-width: 468px) {
@@ -892,10 +1012,38 @@ h3 {
     opacity: 0;
     visibility: hidden;
   }
+  #sequence .title {
+    font-size: 2.2em;
+  }
+
+  #sequence .front-title {
+    font-size: 2.2em;
+  }
+
+  #sequence .front-title .big {
+    font-size: 1em;
+  }
 }
 @media only screen and (max-width: 418px) {
   #sequence {
     height: 375px;
+  }
+
+  #sequence .sequence-pagination {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  #sequence .title {
+    font-size: 2.2em;
+  }
+
+  #sequence .front-title {
+    font-size: 2.2em;
+  }
+
+  #sequence .front-title .big {
+    font-size: 1em;
   }
 }
 @media only screen and (max-width: 368px) {
@@ -904,6 +1052,14 @@ h3 {
   }
   #sequence .title {
     font-size: 2.2em;
+  }
+
+  #sequence .front-title {
+    font-size: 2.2em;
+  }
+
+  #sequence .front-title .big {
+    font-size: 1em;
   }
 }
 @media only screen and (max-width: 320px) and (orientation: portrait) {
@@ -939,6 +1095,7 @@ h3 {
     margin-left: 0;
   }
   #sequence .sequence-pagination {
-    right: 17.5%;
+    opacity: 0;
+    visibility: hidden;
   }
 }
